@@ -1,0 +1,30 @@
+# Oasyce Backend Configuration
+
+api:
+  env: "local"  # 环境设置：local/dev/prod
+  hertz:
+    addr: ":8080"  # Hertz服务器监听地址
+    api_path: "/api"  # API路径前缀
+    sso_path: "/sso"  # SSO路径前缀
+  kitex:
+    addr: ":8081"  # Kitex RPC服务地址
+  proxy_headers:  # 从Hertz请求提取并传递给KiteX的HTTP头
+    - "X-Request-ID"
+    - "X-Trace-ID"
+
+rpc:
+  env: "local"  # RPC环境设置：byted/local/volc
+
+db:
+  dialect: "mysql"  # 数据库类型，必须为mysql
+  dsn: "user:password@tcp(localhost:3306)/oasyce?charset=utf8mb4&parseTime=True&loc=Local"  # 数据库连接字符串
+  user: "root"  # 数据库用户名
+  password: "password"  # 数据库密码
+  host: "localhost"  # 数据库主机
+  port: "3306"  # 数据库端口
+  database: "oasyce"  # 数据库名称
+  # 以下配置仅用于bytedance环境
+  global_dsn_read: ""  # 全局读DSN
+  global_dsn_write: ""  # 全局写DSN
+  repo_dsn_read: ""  # 仓库读DSN
+  repo_dsn_write: ""  # 仓库写DSN
