@@ -3,11 +3,16 @@ module Oasyce-backend
 go 1.24
 
 require (
+	github.com/AlekSi/pointer v1.2.0
 	github.com/bytedance/gopkg v0.1.2
 	github.com/cloudwego/gopkg v0.1.4
 	github.com/cloudwego/hertz v0.9.7
 	github.com/cloudwego/kitex v0.13.1
+	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/jinzhu/configor v1.2.2
+	github.com/json-iterator/go v1.1.12
+	github.com/pkg/errors v0.9.1
+	github.com/rs/xid v1.6.0
 	go.uber.org/fx v1.23.0
 )
 
@@ -33,7 +38,6 @@ require (
 	github.com/google/pprof v0.0.0-20240727154555-813a5fbdbec8 // indirect
 	github.com/iancoleman/strcase v0.2.0 // indirect
 	github.com/jhump/protoreflect v1.8.2 // indirect
-	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.9 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421 // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect

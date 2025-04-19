@@ -25,6 +25,7 @@ type Config struct {
 	API APIConfig `yaml:"api"`
 	RPC RPCConfig `yaml:"rpc"`
 	DB  DBConfig  `yaml:"db"`
+	JWT JWTConfig `yaml:"jwt"`
 }
 
 type APIConfig struct {
@@ -57,6 +58,10 @@ type DBConfig struct {
 	GlobalDSNWrite string `yaml:"global_dsn_write"`
 	RepoDSNRead    string `yaml:"repo_dsn_read"`
 	RepoDSNWrite   string `yaml:"repo_dsn_write"`
+}
+type JWTConfig struct {
+	PublicKey  string `yaml:"public_key"`
+	PrivateKey string `yaml:"private_key" kms:"private_key"`
 }
 
 var (

@@ -17,6 +17,8 @@ func Module(target buildTarget) fx.Option {
 	return fx.Options(
 		hertzModule(target),
 		kitexModule(target),
+		jwtModule,
+
 		user.Module,
 	)
 }
